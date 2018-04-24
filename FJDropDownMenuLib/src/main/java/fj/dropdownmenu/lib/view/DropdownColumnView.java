@@ -6,13 +6,11 @@ import android.graphics.drawable.Drawable;
 import android.util.AttributeSet;
 import android.view.LayoutInflater;
 import android.view.View;
-import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.RelativeLayout;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import fj.dropdownmenu.lib.R;
@@ -136,7 +134,7 @@ public class DropdownColumnView extends LinearLayout {
      * @param singleRowList -- 单列数据（必填）
      * @return
      */
-    public DropdownColumnView setSingleRowList(List<DropdownItemObject> singleRowList,int singleSelectedId){
+    public DropdownColumnView setSingleRowList(List<DropdownItemObject> singleRowList, int singleSelectedId){
         this.singleRowList = singleRowList;
         this.singleSelectedId = singleSelectedId;
         return this;
@@ -146,7 +144,7 @@ public class DropdownColumnView extends LinearLayout {
      * @param doubleRowList -- 双列数据（为空默认为单列选择）
      * @return
      */
-    public DropdownColumnView setDoubleRowList(List<DropdownItemObject> doubleRowList,int doubleSelectedId){
+    public DropdownColumnView setDoubleRowList(List<DropdownItemObject> doubleRowList, int doubleSelectedId){
         this.doubleRowList = doubleRowList;
         this.doubleSelectedId = doubleSelectedId;
         return this;
@@ -156,7 +154,7 @@ public class DropdownColumnView extends LinearLayout {
      * @param threeRowList  -- 三列数据（为空默认为双列选择）
      * @return
      */
-    public DropdownColumnView setThreeRowList(List<DropdownItemObject> threeRowList,int threeSelectedId){
+    public DropdownColumnView setThreeRowList(List<DropdownItemObject> threeRowList, int threeSelectedId){
         this.threeRowList = threeRowList;
         this.threeSelectedId = threeSelectedId;
         return this;
@@ -170,7 +168,7 @@ public class DropdownColumnView extends LinearLayout {
     public DropdownColumnView setRandomView(int randomView){
         LayoutInflater layoutInflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         this.randomView = layoutInflater.inflate(randomView, null);
-        LinearLayout.LayoutParams params=new LinearLayout.LayoutParams(LayoutParams.MATCH_PARENT,LayoutParams.WRAP_CONTENT);
+        LinearLayout.LayoutParams params=new LinearLayout.LayoutParams(LayoutParams.MATCH_PARENT, LayoutParams.WRAP_CONTENT);
         this.randomView.setLayoutParams(params);
         return this;
     }
@@ -336,7 +334,7 @@ public class DropdownColumnView extends LinearLayout {
         });
         return this;
     }
-    public DropdownColumnView ThreeRow(int singleSelectedId,int doubleSelectedId){
+    public DropdownColumnView ThreeRow(int singleSelectedId, int doubleSelectedId){
 
         final List<DropdownItemObject> itemRegionLinkage =
                 DropdownUtils.getCurrentObj(threeRowList,singleSelectedId,doubleSelectedId);

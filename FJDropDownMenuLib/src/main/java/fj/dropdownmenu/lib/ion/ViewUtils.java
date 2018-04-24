@@ -1,13 +1,9 @@
 package fj.dropdownmenu.lib.ion;
 
 import android.app.Activity;
-import android.util.Log;
 import android.view.View;
 
 import java.lang.reflect.Field;
-import java.lang.reflect.Method;
-import java.util.ArrayList;
-import java.util.List;
 
 import fj.dropdownmenu.lib.view.DropdownButton;
 import fj.dropdownmenu.lib.view.DropdownColumnView;
@@ -30,7 +26,7 @@ public class ViewUtils {
         }
     }
 
-    public static void injectViews(Activity activity,View view) {
+    public static void injectViews(Activity activity, View view) {
         view.clearAnimation();
         view.setVisibility(View.GONE);
         Class a = activity.getClass();

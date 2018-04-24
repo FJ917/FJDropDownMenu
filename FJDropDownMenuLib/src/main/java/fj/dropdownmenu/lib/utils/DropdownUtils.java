@@ -1,7 +1,6 @@
 package fj.dropdownmenu.lib.utils;
 
 import android.app.Activity;
-import android.content.Context;
 import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
@@ -26,7 +25,7 @@ public class DropdownUtils {
 
     public static DropdownColumnView currentDropdownList;
 
-    public static void init(final Activity activity,View view){
+    public static void init(final Activity activity, View view){
         dropdown_in = AnimationUtils.loadAnimation(activity, R.anim.dropdown_in);
         dropdown_out = AnimationUtils.loadAnimation(activity, R.anim.dropdown_out);
         dropdown_mask_out = AnimationUtils.loadAnimation(activity, R.anim.dropdown_mask_out);
@@ -133,7 +132,7 @@ public class DropdownUtils {
      * @param id --id
      * @return 文字
      */
-    public static String getTitle(List<DropdownItemObject> list,int id){
+    public static String getTitle(List<DropdownItemObject> list, int id){
         String str = "";
         //设置默认选中按钮上的文字
         for (DropdownItemObject dropdownItemObject : list){

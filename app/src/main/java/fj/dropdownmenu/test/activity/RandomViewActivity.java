@@ -16,12 +16,10 @@ import butterknife.ButterKnife;
 import fj.dropdownmenu.lib.concat.DropdownI;
 import fj.dropdownmenu.lib.ion.ViewInject;
 import fj.dropdownmenu.lib.ion.ViewUtils;
-import fj.dropdownmenu.lib.pojo.DropdownItemObject;
 import fj.dropdownmenu.lib.utils.DropdownUtils;
 import fj.dropdownmenu.lib.view.DropdownButton;
 import fj.dropdownmenu.lib.view.DropdownColumnView;
 import fj.dropdownmenu.test.R;
-import fj.dropdownmenu.test.bean.DataBean;
 
 /**
  * 任意view布局
