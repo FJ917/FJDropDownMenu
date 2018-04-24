@@ -169,18 +169,10 @@ public void onRandom(View view) {
 ```
 
 
-
----
-
-> ### 源码
-> [https://github.com/FJ917/FJDropDownMenu](https://github.com/FJ917/FJDropDownMenu)
-
----
-> **未经本人允许禁止转载，违者必究**
 ---
 
 
-> **个人博客：[WWW.FJ917.COM](http://www.fj917.com)**
+> **个人博客：[WWW.FJ917.COM](http://www.fj917.com)**<br>
 > **简书：[www.jianshu.com/u/3d2770e6e489](http://www.jianshu.com/u/3d2770e6e489)**
 
 
