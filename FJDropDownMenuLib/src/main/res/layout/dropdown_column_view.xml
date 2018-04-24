@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/mRelativeLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="200dp"
+    android:background="@color/stand_bg">
+
+    <ListView
+        android:id="@+id/lvSingleRow"
+        android:layout_width="110dp"
+        android:layout_height="wrap_content"
+        android:background="@color/stand_bg"
+        android:divider="@color/font_gray"
+        android:dividerHeight="1px" />
+
+    <ListView
+        android:id="@+id/lvDoubleRow"
+        android:layout_width="110dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/lvSingleRow"
+        android:layout_alignTop="@+id/lvSingleRow"
+        android:layout_toRightOf="@+id/lvSingleRow"
+        android:background="@color/stand_bg"
+        android:divider="@color/font_gray"
+        android:dividerHeight="1px"
+        android:visibility="gone" />
+
+    <ListView
+        android:id="@+id/lvThreeRow"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/lvDoubleRow"
+        android:layout_alignTop="@+id/lvDoubleRow"
+        android:layout_toRightOf="@+id/lvDoubleRow"
+        android:background="@color/stand_bg"
+        android:divider="@color/font_gray"
+        android:dividerHeight="1px"
+        android:visibility="gone" />
+</RelativeLayout>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="white_pressed">#d5d5d5</color>
+    <color name="stand_bg">#f6f6f6</color>
+    <item name="blue" type="color">#1296db</item>
+    <color name="font_black_content">#222222</color>
+    <color name="divide">#e4e4e4</color>
+    <color name="font_black_6">#666666</color>
+    <color name="white">#ffffff</color>
+    <color name="font_gray">#999999</color>
+
+    <color name="black_p50">#7f000000</color>
+</resources>

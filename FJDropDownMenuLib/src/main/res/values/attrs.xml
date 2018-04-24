@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="DropdownButton">
+        <!-- 是否显示横线-->
+        <attr name="isLine" format="boolean" />
+        <!-- 选中文字颜色 -->
+        <attr name="selectedTextColor" format="color" />
+        <!-- 选中图标 -->
+        <attr name="selectedIcon" format="reference" />
+        <!-- 选中横线颜色 -->
+        <attr name="lineColor" format="color" />
+        <!-- 未选中文字颜色 -->
+        <attr name="notSelectedTextColor" format="color" />
+        <!-- 未选中图标 -->
+        <attr name="notSelectedIcon" format="reference" />
+    </declare-styleable>
+    <declare-styleable name="DropdownColumnView">
+        <!-- 列选中图标 -->
+        <attr name="columnSelectedIcon" format="reference" />
+        <attr name="columnType">
+            <flag name="singleRow" value="1" />
+            <flag name="doubleRow" value="2" />
+            <flag name="threeRow" value="3" />
+            <flag name="randomView" value="4" />
+        </attr>
+    </declare-styleable>
+</resources>
