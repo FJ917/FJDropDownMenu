@@ -23,10 +23,19 @@ allprojects {
     }
 }
 dependencies {
-    compile 'com.github.FJ917:FJDropDownMenu:v1.0'
+    compile 'com.github.FJ917:FJDropDownMenu:v1.1'
 }
 ```
 #### 使用
+
+#####更新v1.1版本
+新增适配Fragment，使用区别在于，初始化的方法
+
+```
+DropdownUtils.initFragment(getActivity(),this,view, mask);
+ViewUtils.injectFragmentViews(this,view, mask);
+```
+---
 
 结构：由DropdownButton和DropdownColumnView构成
 ```
