@@ -11,6 +11,7 @@ import java.util.List;
 import fj.dropdownmenu.lib.R;
 import fj.dropdownmenu.lib.ion.ViewUtils;
 import fj.dropdownmenu.lib.pojo.DropdownItemObject;
+import fj.dropdownmenu.lib.view.DropdownButton;
 import fj.dropdownmenu.lib.view.DropdownColumnView;
 
 /**
@@ -43,6 +44,30 @@ public class DropdownUtils {
             public void onAnimationEnd(Animation animation) {
                 if (currentDropdownList == null)
                     ViewUtils.injectViews(activity,mask);
+            }
+            @Override
+            public void onAnimationRepeat(Animation animation) {}
+        });
+    }
+
+    public static void initFragment(final Activity activity,final Object target, final View view, View v){
+        dropdown_in = AnimationUtils.loadAnimation(activity, R.anim.dropdown_in);
+        dropdown_out = AnimationUtils.loadAnimation(activity, R.anim.dropdown_out);
+        dropdown_mask_out = AnimationUtils.loadAnimation(activity, R.anim.dropdown_mask_out);
+        mask = v;
+        mask.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                hide();
+            }
+        });
+        dropdown_mask_out.setAnimationListener(new Animation.AnimationListener() {
+            @Override
+            public void onAnimationStart(Animation animation) {}
+            @Override
+            public void onAnimationEnd(Animation animation) {
+                if (currentDropdownList == null)
+                    ViewUtils.injectFragmentViews(target,view,mask);
             }
             @Override
             public void onAnimationRepeat(Animation animation) {}

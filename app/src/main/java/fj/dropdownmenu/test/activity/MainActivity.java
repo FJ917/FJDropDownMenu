@@ -25,6 +25,8 @@ public class MainActivity extends AppCompatActivity {
     Button btnNestedCombination;
     @BindView(R.id.btnRandomView)
     Button btnRandomView;
+    @BindView(R.id.btnFragmentDemo)
+    Button btnFragmentDemo;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,7 +35,7 @@ public class MainActivity extends AppCompatActivity {
         ButterKnife.bind(this);
     }
 
-    @OnClick({R.id.btnSingle, R.id.btnDouble, R.id.btnThree, R.id.btnCombination, R.id.btnNestedCombination, R.id.btnRandomView})
+    @OnClick({R.id.btnSingle, R.id.btnDouble, R.id.btnThree, R.id.btnCombination, R.id.btnNestedCombination, R.id.btnRandomView, R.id.btnFragmentDemo})
     public void onViewClicked(View view) {
         Intent intent = new Intent();
         switch (view.getId()) {
@@ -59,6 +61,10 @@ public class MainActivity extends AppCompatActivity {
                 break;
             case R.id.btnRandomView:
                 intent.setClass(this,RandomViewActivity.class);
+                startActivity(intent);
+                break;
+            case R.id.btnFragmentDemo:
+                intent.setClass(this,FragmentDemoActivity.class);
                 startActivity(intent);
                 break;
         }

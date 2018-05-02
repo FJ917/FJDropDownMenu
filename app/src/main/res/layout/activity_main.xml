@@ -66,4 +66,13 @@
         android:text="任意view"
         android:textColor="@color/white" />
 
+    <Button
+        android:id="@+id/btnFragmentDemo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:background="@color/colorPrimaryDark"
+        android:text="Fragment实现"
+        android:textColor="@color/white" />
+
 </LinearLayout>

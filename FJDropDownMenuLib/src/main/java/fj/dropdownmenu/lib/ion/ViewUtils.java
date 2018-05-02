@@ -46,4 +46,25 @@ public class ViewUtils {
             }
         }
     }
+
+    public static void injectFragmentViews(Object target,View view, View mask) {
+        mask.clearAnimation();
+        mask.setVisibility(View.GONE);
+        Class a = target.getClass();
+        Field[] fields = a.getDeclaredFields();
+        for (Field field : fields) {
+            if (field.isAnnotationPresent(ViewInject.class)) {
+                ViewInject viewInject = field.getAnnotation(ViewInject.class);
+                if(field.getType().getName().equals("fj.dropdownmenu.lib.view.DropdownButton")){
+                    DropdownButton dropdownButton = (DropdownButton) view.findViewById(viewInject.value());
+                    dropdownButton.setChecked(false);
+                }
+                if(field.getType().getName().equals("fj.dropdownmenu.lib.view.DropdownColumnView")){
+                    DropdownColumnView dropdownColumnView = (DropdownColumnView) view.findViewById(viewInject.value());
+                    dropdownColumnView.setVisibility(View.GONE);
+                    dropdownColumnView.clearAnimation();
+                }
+            }
+        }
+    }
 }
